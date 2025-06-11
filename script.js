@@ -1,3 +1,4 @@
+
 let num1 = 0;
 let num2 = 0;
 let operator = "";
@@ -30,9 +31,17 @@ function operate(num1, operator, num2) {
 
 function display(digit) {
   displayArea.textContent += digit;
-  if (digit >= 0 && digit <= 9) {
-    num1 = digit;
-  } else if (["+", "-", "x", "/", ".", "="].includes(digit)) {
-    operator = digit;
-  }
+  // if (digit >= 0 && digit <= 9) {
+  //   num1 = digit;
+  // } else if (["+", "-", "x", "/", ".", "="].includes(digit)) {
+  //   operator = digit;
+  // }
+
+  // if (["="].includes(digit))
+  //   operate()
+}
+
+function clearDisplayArea()
+{
+  displayArea.textContent = " ";
 }
