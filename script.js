@@ -4,6 +4,7 @@ let num2 = 0;
 let operator = "";
 const displayArea = document.querySelector(".display");
 let displayContent = 0;
+let lastDigit;
 
 function add(a, b) {
   return a + b;
@@ -41,7 +42,22 @@ function display(digit) {
   //   operate()
 }
 
-function clearDisplayArea()
-{
+
+const clearButton = document.querySelector('.clearButton');
+
+clearButton.addEventListener('click', function(){
   displayArea.textContent = " ";
-}
+});
+
+const deleteButton = document.querySelector('.deleteButton');
+
+deleteButton.addEventListener('click', function(){
+  const stringLength = displayArea.textContent.length;
+  if(stringLength > 0)
+      displayArea.textContent = displayArea.textContent.slice(0,stringLength-1);
+});
+
+
+
+
+
